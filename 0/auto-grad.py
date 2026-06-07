@@ -16,5 +16,12 @@ print(z)
 # tldr  how much z changes with respect to x
 #backward() computes the gradient of z with respect to x
 
-z.backward() # i.e dz/dx = 1.5
+
+v=torch.tensor([0.1, 1.0, 0.0001], dtype=torch.float32)
+z.backward() # i.e dz/dx = 0.1*1.5
 print(x.grad)
+
+
+
+# z.backward() # i.e dz/dx = 1.5
+# print(x.grad)
